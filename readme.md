@@ -8,8 +8,9 @@ A quick python script to watch amazon prices for certain deals that utilizes AWS
 3. Verify your email on AWS SES
 4. Add this verified email under `SENDER` in `send_email`
 5. Replace `recipient@example.com` with the email you want to receive the notification (does not have to be verified)
-6. Spin up an EC2 (can be free tier, t2.micro) and add the `price_watch.py` to it
-7. Start up a `virtualenv` or `venv` in the ec2 and `pip install beautifulsoup4`, `pip install requests`, and `pip install boto3`, and then start the virtual environment
-8. I used linux screen to keep the script running even when I'm not on the instance, which is why I use `time.sleep([val])` in `main`, but you can opt for CRON and take out the `time.sleep`
-9. Adjust the frequency of how often you'd like to scan the item price
-10. Run the script! 
+6. Make sure `REGION` matches the region of your EC2
+7. Spin up an EC2 (can be free tier, t2.micro) and add the `price_watch.py` to it
+8. Start up a `virtualenv` or `venv` in the ec2 and `pip install beautifulsoup4`, `pip install requests`, and `pip install boto3`, and then start the virtual environment
+9. I used linux screen to keep the script running even when I'm not on the instance, which is why I use `time.sleep([val])` in `main`, but you can opt for CRON and take out the `time.sleep`
+10. Adjust the frequency of how often you'd like to scan the item price
+11. Run the script! 
